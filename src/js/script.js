@@ -1,39 +1,87 @@
-var money;
-var time;
-var expens;
-var moneyExpens;
-var everyDay;
-var expenses;
-var appData = {
-    budjet: 0,
-    timeData: '',
-    expenses: {},
+let money;
+let time;
+money = prompt("Ваш бюджет на месяц?");
+time = prompt("Введите дату в формате YYYY-MM-DD");
+console.log(money,time);
+let appData = {
+    budjet: money,
+    timeData: time,
+    expenses: {month : prompt("Введите обязательную статью расходов в этом месяце"),
+     cost : prompt("Во сколько обойдется?")},
     optionalExpenses: {},
     income: [],
-    savings: false,
+    savings: false
 };
-function checkMoney() {
-    var money = prompt('Ваш бюджет на месяц?');
-    everyDay = money;
-    var time = prompt('Введите дату в формате YYYY-MM-DD');
-if (money&&money > 0) {
-    appData.budjet = money;
-    appData.time = time;
-    console.log('Ваш бюджет на месяц ' + appData.budjet);
-} else {
-    alert('Данные введены не верно. Бюджет на месяц должен быть в числовом формате');
-checkMoney();
-}
-}
-checkMoney();
+
+// 4
+
+console.log("expenses { " + appData.expenses.month + ":"+ appData.expenses.cost+" }" );
+
+var daily = money / 30;
+var daily1 = alert(daily);
+console.log(daily);
+
+// for(let i=9;i>0;i--)
+// {
+
+// console.log(i);
+// }
+// let num = 50;
+// while (num < 55) {
+//     console.log(num);
+//     num++;
+// }
+// do {console.log(num);
+// num++;
+// }
+// while(num<56);
+// for (let i = 1; i < 9; i++){
+//     if (i==6) {
+//         break
+//     }
+//     console.log(i)
+// }
+
+
+
+
+
+// var money;
+// var time;
+// var expens;
+// var moneyExpens;
+// var everyDay;
+// var expenses;
+// var appData = {
+//     budjet: 0,
+//     timeData: '',
+//     expenses: {},
+//     optionalExpenses: {},
+//     income: [],
+//     savings: false,
+// };
+// function checkMoney() {
+//     var money = prompt('Ваш бюджет на месяц?');
+//     everyDay = money;
+//     var time = prompt('Введите дату в формате YYYY-MM-DD');
+// if (money&&money > 0) {
+//     appData.budjet = money;
+//     appData.time = time;
+//     console.log('Ваш бюджет на месяц ' + appData.budjet);
+// } else {
+//     alert('Данные введены не верно. Бюджет на месяц должен быть в числовом формате');
+// checkMoney();
+// }
+// }
+// checkMoney();
  
-function checkExpens(){
-    expens = prompt('Введите обязательную статью расходов в этом месяце');
-    moneyExpens = prompt('Во сколько обойдётся');
-    console.log(expens, moneyExpens);
-}
-checkExpens();
-console.log('Бюджет на день ' + everyDay/30);
+// function checkExpens(){
+//     expens = prompt('Введите обязательную статью расходов в этом месяце');
+//     moneyExpens = prompt('Во сколько обойдётся');
+//     console.log(expens, moneyExpens);
+// }
+// checkExpens();
+// console.log('Бюджет на день ' + everyDay/30);
 
 // var money = prompt('Ваш бюджет на месяц?');
 // var time = prompt('Введите дату в формате YYYY-MM-DD');
